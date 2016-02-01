@@ -10,10 +10,10 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="15dp">
         <view
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="190dp"
             android:id="@+id/cv_expenses"
             class="android.support.v7.widget.CardView">
             <LinearLayout
@@ -29,31 +29,17 @@
                     android:text="Overview Expenses"
                     android:id="@+id/textViewExpesnse"/>
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:shrinkColumns="*"
-                    android:stretchColumns="*">
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello World!" />
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:id="@+id/listViewExp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello wood!" />
-                    </TableRow>
-                </TableLayout>
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:shrinkColumns="*"
-                    android:stretchColumns="*">
+                    android:stretchColumns="*"
+                    android:paddingTop="5dp">
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
@@ -83,7 +69,7 @@
         </view>
         <view
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="190dp"
             android:id="@+id/cv_income"
             android:layout_marginTop="10dp"
             class="android.support.v7.widget.CardView">
@@ -100,29 +86,15 @@
                     android:text="Overview Income"
                     android:id="@+id/textViewIncome"/>
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:shrinkColumns="*"
-                    android:stretchColumns="*">
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello World!" />
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:id="@+id/listViewInc" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello wood!" />
-                    </TableRow>
-                </TableLayout>
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
                     android:shrinkColumns="*"
                     android:stretchColumns="*">
                     <TableRow
@@ -158,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:paddingTop="20dp"
+            android:paddingTop="10dp"
             android:paddingBottom="5dp"
             android:layout_gravity="center_horizontal">
 

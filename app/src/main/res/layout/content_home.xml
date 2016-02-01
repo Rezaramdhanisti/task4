@@ -9,7 +9,7 @@
     tools:showIn="@layout/app_bar_home"
     android:background="#95A5A6">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -183,7 +183,15 @@
                 android:id="@+id/textViewNumHome" />
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_place"
+        android:name="com.task.taskfour.transactionbookkeepping.HomePage">
+
+    </fragment>
 
 
 </RelativeLayout>

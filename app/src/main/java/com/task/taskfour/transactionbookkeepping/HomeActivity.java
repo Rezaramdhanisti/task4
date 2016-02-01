@@ -3,6 +3,8 @@ package com.task.taskfour.transactionbookkeepping;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,6 +15,7 @@ import android.view.MenuItem;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +41,6 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        Fragment fragment = new HomePage();
-
-        FragmentManager fm = getSupportFragmentManager();
-
-        FragmentTransaction ft = fm.beginTransaction();
-
-
     }
 
     @Override
@@ -85,15 +80,36 @@ public class HomeActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment=null;
+        FragmentManager fm;
+        FragmentTransaction ft;
+        Class fragmentClass = null;
+
 
         if (id == R.id.dashboard_menu) {
-            // Handle the camera action
+            fragmentClass = HomePage.class;
         } else if (id == R.id.transaction_menu) {
-
+            fragmentClass = TransactionPage.class;
         } else if (id == R.id.sync_menu) {
-
+            fragmentClass = SyncPage.class;
+        }else{
+            fragmentClass = null;
         }
 
+
+        try {
+            fragment = (Fragment)fragmentClass.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        fm = getSupportFragmentManager();
+
+        ft = fm.beginTransaction();
+        ft.replace(R.id.fragment_place, fragment);
+        ft.commit();
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

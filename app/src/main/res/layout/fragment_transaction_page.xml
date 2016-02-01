@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.task.taskfour.transactionbookkeepping.TransactionPage"
+    android:background="#E08283">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/cv_addExpenses"
+            class="android.support.v7.widget.CardView">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="New Expenses"
+                    android:id="@+id/textViewInExp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inputDescExpense"
+                    android:gravity="center"
+                    android:hint="Description"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inputAmtExpense"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:hint="Amount"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Expense"
+                    android:id="@+id/btn_add_exp"
+                    android:layout_gravity="right" />
+
+
+            </LinearLayout>
+        </view>
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/cv_addIncome"
+            android:layout_marginTop="10dp"
+            class="android.support.v7.widget.CardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="New Income"
+                    android:id="@+id/textViewInpIncome"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inputDescIncome"
+                    android:gravity="center"
+                    android:hint="Description"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inputAmtIncome"
+                    android:gravity="center"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:ems="10"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Income"
+                    android:id="@+id/btn_add_inc"
+                    android:layout_gravity="right" />
+
+
+            </LinearLayout>
+        </view>
+
+    </LinearLayout>
+
+</FrameLayout>

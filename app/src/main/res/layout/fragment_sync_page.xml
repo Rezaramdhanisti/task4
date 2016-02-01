@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.task.taskfour.transactionbookkeepping.SyncPage"
+    android:background="#81CFE0">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Synchronize"
+        android:id="@+id/btn_sync"
+        android:layout_gravity="center" />
+</FrameLayout>
