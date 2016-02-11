@@ -1,11 +1,11 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.task.taskfour.transactionbookkeepping.HomePage"
     android:background="#95A5A6">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
             android:layout_height="190dp"
             android:id="@+id/cv_expenses"
             class="android.support.v7.widget.CardView">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,6 +41,7 @@
                     android:shrinkColumns="*"
                     android:stretchColumns="*"
                     android:paddingTop="5dp">
+
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
@@ -50,19 +52,23 @@
                             android:layout_height="1dp"
                             android:text="" />
                     </TableRow>
+
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello World!" />
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hello wood!" />
+                            android:textStyle="bold"
+                            android:text="Total"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/expensesTotal"
+                            android:text="$9999999" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
@@ -73,6 +79,7 @@
             android:id="@+id/cv_income"
             android:layout_marginTop="10dp"
             class="android.support.v7.widget.CardView">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,16 +117,18 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="4.5dp">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hello World!" />
+                            android:textStyle="bold"
+                            android:text="Total" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hello wood!" />
+                            android:id="@+id/incomeTotal"
+                            android:text="$9999999" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
@@ -149,9 +158,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="bold"
                 android:text="$99999999"
-                android:id="@+id/textViewNumHome" />
+                android:id="@+id/balanceTotal" />
         </LinearLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

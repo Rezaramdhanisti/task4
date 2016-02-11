@@ -3,15 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.task.taskfour.transactionbookkeepping.SyncPage"
-    android:background="#81CFE0">
+    android:background="#9e6c4b">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <Button
+        android:id="@+id/btn_sync"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Synchronize"
-        android:id="@+id/btn_sync"
-        android:layout_gravity="center" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/custom_button"
+        android:layout_gravity="center"
+        android:width="160dp"
+        android:height="60dp"/>
 </FrameLayout>

@@ -6,103 +6,107 @@
     android:background="#E08283">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp">
-        <view
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/cv_addExpenses"
-            class="android.support.v7.widget.CardView">
-            <LinearLayout
+            android:layout_height="match_parent"
+            android:padding="15dp">
+            <view
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="New Expenses"
-                    android:id="@+id/textViewInExp"/>
-
-                <EditText
+                android:layout_height="200dp"
+                android:id="@+id/cv_addExpenses"
+                class="android.support.v7.widget.CardView">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/inputDescExpense"
-                    android:gravity="center"
-                    android:hint="Description"/>
+                    android:padding="12dp"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/inputAmtExpense"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:ems="10"
-                    android:hint="Amount"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="New Expenses"
+                        android:id="@+id/textViewInExp"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add Expense"
-                    android:id="@+id/btn_add_exp"
-                    android:layout_gravity="right" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/inputDescExpense"
+                        android:maxLength="25"
+                        android:gravity="center"
+                        android:hint="Description"/>
 
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/inputAmtExpense"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:hint="Amount"/>
 
-            </LinearLayout>
-        </view>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Expense"
+                        android:id="@+id/btn_add_exp"
+                        android:layout_gravity="right" />
 
-        <view
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/cv_addIncome"
-            android:layout_marginTop="10dp"
-            class="android.support.v7.widget.CardView">
+                </LinearLayout>
+            </view>
 
-            <LinearLayout
+            <view
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:layout_height="200dp"
+                android:id="@+id/cv_addIncome"
+                android:layout_marginTop="10dp"
+                class="android.support.v7.widget.CardView">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="New Income"
-                    android:id="@+id/textViewInpIncome"/>
-
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/inputDescIncome"
-                    android:gravity="center"
-                    android:hint="Description"/>
+                    android:padding="12dp"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/inputAmtIncome"
-                    android:gravity="center"
-                    android:hint="Amount"
-                    android:inputType="number"
-                    android:ems="10"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="New Income"
+                        android:id="@+id/textViewInpIncome"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add Income"
-                    android:id="@+id/btn_add_inc"
-                    android:layout_gravity="right" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/inputDescIncome"
+                        android:maxLength="25"
+                        android:gravity="center"
+                        android:hint="Description"/>
 
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/inputAmtIncome"
+                        android:gravity="center"
+                        android:hint="Amount"
+                        android:inputType="number"
+                        android:ems="10"/>
 
-            </LinearLayout>
-        </view>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Income"
+                        android:id="@+id/btn_add_inc"
+                        android:layout_gravity="right" />
 
-    </LinearLayout>
+                </LinearLayout>
+            </view>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class TransactionPage extends Fragment {
@@ -42,6 +43,9 @@ public class TransactionPage extends Fragment {
                 String desc = descExpense.getText().toString();
                 String amt = amountExpense.getText().toString();
                 myDB.save_expense(desc,amt);
+                Toast.makeText(getActivity(), "Success Add Expenses", Toast.LENGTH_LONG).show();
+                descExpense.setText("");
+                amountExpense.setText("");
             }
         });
 
@@ -52,6 +56,9 @@ public class TransactionPage extends Fragment {
                 String desc = descIncome.getText().toString();
                 String amt = amountIncome.getText().toString();
                 myDB.save_income(desc, amt);
+                Toast.makeText(getActivity(), "Success Add Income", Toast.LENGTH_LONG).show();
+                descIncome.setText("");
+                amountIncome.setText("");
             }
         });
 

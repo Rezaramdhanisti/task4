@@ -118,9 +118,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor expense = db.rawQuery("SELECT * FROM " + TABLE_NAME_EXPENSES, null);
-
+        Cursor expense = db.rawQuery("SELECT "+COL_EXPENSES_ID+" as '_id', "+COL_EXPENSES_DESC+", "
+                +COL_EXPENSES_AMOUNT+" FROM " + TABLE_NAME_EXPENSES, null);
         return expense;
+
 
     }
 
@@ -128,7 +129,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor income = db.rawQuery("SELECT * FROM " + TABLE_NAME_INCOME, null);
+        Cursor income = db.rawQuery("SELECT "+COL_INCOME_ID+" as '_id', "+COL_INCOME_DESC+", "
+                +COL_INCOME_AMOUNT+" FROM " + TABLE_NAME_INCOME, null);
 
         return income;
 
