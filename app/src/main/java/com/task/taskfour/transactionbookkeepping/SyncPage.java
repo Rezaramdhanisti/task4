@@ -193,14 +193,13 @@ public class SyncPage extends Fragment {
 
                                 public void onClick(DialogInterface dialog, int which) {
 
-                                    Toast.makeText(getActivity(), "No Internet Connection.", Toast.LENGTH_SHORT).show();
                                     try {
                                         send_data(url_target);
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
                                     dialog.cancel();
-
+                                    Toast.makeText(getActivity(), "No Internet Connection.", Toast.LENGTH_SHORT).show();
                                 }
 
                             });
