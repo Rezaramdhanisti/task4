@@ -1,8 +1,6 @@
 package com.task.taskfour.transactionbookkeepping;
 
-/**
- * Created by Personal on 2/4/2016.
- */
+
 public class Transaction {
 
     private int id;

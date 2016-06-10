@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * Created by Personal on 2/4/2016.
- */
+
 public class Transactions {
     @SerializedName("transactions")
 

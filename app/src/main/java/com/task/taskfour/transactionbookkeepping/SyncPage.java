@@ -51,7 +51,7 @@ public class SyncPage extends Fragment {
             @Override
             public void onClick(View v) {
                 try {
-                    send_data("http://private-e02f1-taskfour.apiary-mock.com");
+                    send_data("http://private-142c32-datausers.apiary-mock.com");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -82,40 +82,40 @@ public class SyncPage extends Fragment {
 
         JSONArray listTransc = new JSONArray();
 
-            try {
-                while (expenses.moveToNext()) {
+        try {
+            while (expenses.moveToNext()) {
 
-                    JSONObject trans_json = new JSONObject();
+                JSONObject trans_json = new JSONObject();
 
-                    trans_json.put("id", expenses.getInt(expenses.getColumnIndex("_id")));
+                trans_json.put("id", expenses.getInt(expenses.getColumnIndex("_id")));
 
-                    trans_json.put("description", expenses.getString(expenses.getColumnIndex("Description")));
+                trans_json.put("description", expenses.getString(expenses.getColumnIndex("Description")));
 
-                    trans_json.put("amount", expenses.getString(expenses.getColumnIndex("Amount")));
+                trans_json.put("amount", expenses.getString(expenses.getColumnIndex("Amount")));
 
                     /*Log.e("id ", expenses.getString(expenses.getColumnIndex("_id")));
                     Log.e("desc ",  expenses.getString(expenses.getColumnIndex("Description")));
                     Log.e("amt ", expenses.getString(expenses.getColumnIndex("Amount")));*/
 
-                    listTransc.put(trans_json);
+                listTransc.put(trans_json);
 
-                }
-
-                while (incomes.moveToNext()) {
-                    JSONObject trans_json = new JSONObject();
-
-                    trans_json.put("id", incomes.getInt(incomes.getColumnIndex("_id")));
-
-                    trans_json.put("description", incomes.getString(incomes.getColumnIndex("Description")));
-
-                    trans_json.put("amount", incomes.getString(incomes.getColumnIndex("Amount")));
-
-                    listTransc.put(trans_json);
-                }
-
-            } catch (JSONException e) {
-                Log.i("info", String.valueOf(e));
             }
+
+            while (incomes.moveToNext()) {
+                JSONObject trans_json = new JSONObject();
+
+                trans_json.put("id", incomes.getInt(incomes.getColumnIndex("_id")));
+
+                trans_json.put("description", incomes.getString(incomes.getColumnIndex("Description")));
+
+                trans_json.put("amount", incomes.getString(incomes.getColumnIndex("Amount")));
+
+                listTransc.put(trans_json);
+            }
+
+        } catch (JSONException e) {
+            Log.i("info", String.valueOf(e));
+        }
 
 
         for(int i=0;i<listTransc.length();i++) {

@@ -26,7 +26,7 @@ public interface SyncApi {
     Call<Transactions> updateTransactions(@Path("id") int transaction_id, @Body Transaction transaction);
 
 
-    @POST("/transactions")
+    @POST("/users")
 
     Call<Transaction> syncTransactions(@Body Transaction transaction);
 
