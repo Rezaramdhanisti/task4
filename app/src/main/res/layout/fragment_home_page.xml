@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.task.taskfour.transactionbookkeepping.HomePage"
-    android:background="#95A5A6">
+    android:background="#616161">
 
 
     <LinearLayout

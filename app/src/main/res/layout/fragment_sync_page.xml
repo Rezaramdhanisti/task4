@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.task.taskfour.transactionbookkeepping.SyncPage"
-    android:background="#9e6c4b">
+    android:background="#616161">
 
     <!-- TODO: Update blank fragment layout -->
 

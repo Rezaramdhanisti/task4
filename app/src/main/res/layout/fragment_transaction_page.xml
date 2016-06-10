@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.task.taskfour.transactionbookkeepping.TransactionPage"
-    android:background="#E08283">
+    android:background="#616161">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

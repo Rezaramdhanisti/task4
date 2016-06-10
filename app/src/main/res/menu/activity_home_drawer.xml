@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/dashboard_menu"
-            android:icon="@drawable/ic_image_wb_cloudy"
+            android:textColor="#ffffff"
             android:title="Dashboard" />
         <item
             android:id="@+id/transaction_menu"
-            android:icon="@drawable/ic_device_brightness_high"
+            android:textColor="#ffffff"
             android:title="Transaction" />
         <item
             android:id="@+id/sync_menu"
-            android:icon="@drawable/ic_image_flash_on"
+            android:textColor="#ffffff"
             android:title="Synchronize" />
     </group>
 
