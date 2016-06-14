@@ -7,9 +7,7 @@ import retrofit.http.POST;
 import retrofit.http.PUT;
 import retrofit.http.Path;
 
-/**
- * Created by Personal on 2/4/2016.
- */
+
 
 public interface SyncApi {
     @GET("/transactions")
